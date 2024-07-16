@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: .75rem 1.5rem;
+    background-color: #0077fa;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+    color: #fff;
+}
+
+.logo i{
+    font-size: 25px;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.icons{
+    position: absolute;
+    right: 5%;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.icons #close_icon{
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+.navigation button{
+    padding: .2rem;
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    background-color: #fff;
+    padding: .25rem .7rem;
+    border-radius: 50px;
+}
+
+.profile img{
+    width: 1.5rem;
+    border-radius: 100%;
+}
+
+.profile button{
+    background: transparent;
+    border: 0;
+    color: #0077fa;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width:992px){
+    header{
+        padding: 1rem 5%;
+    }
+}
+
+@media (max-width:628px){
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu_icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close_icon{
+        display: block;
+    }
+
+    .navigation{
+        position: absolute;
+        flex-direction: column;
+        top: 10.4%;
+        right:0;
+        width: 40%;
+        height: 0;
+        background: #121212;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+
+    .profile button{
+        color: #121212;
+    }
+
+    #check:checked~.navigation{
+        height: 15rem;
+    }
+}
