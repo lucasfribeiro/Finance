@@ -54,7 +54,68 @@
             </div>
         </div>
     </div>
-    </div>
 
+    <div class="bottom">
+        <div class="addArea">
+            <div class="inputs">
+            <label>Nome:</label>
+          <input
+            type="text"
+            id="nova-despesa-nome"
+            placeholder="Ex.: Água"
+          />
+        </div>
+        <div class="inputs">
+          <label>Valor:</label>
+          <input
+            type="number"
+            id="nova-despesa-valor"
+            placeholder="R$ 0.00"
+          />
+        </div>
+        <div class="inputs">
+          <label>Vencimento:</label>
+          <input
+            type="date"
+            id="nova-despesa-data"
+          />
+        </div>
+          <button id="adicionar-despesa">Adicionar</button>
+          </div>
+
+          <div class="tabela">
+            <table id="despesas-table">
+              <thead>
+                <tr>
+                  <th>Despesa</th>
+                  <th>Valor</th>
+                  <th>Vencimento</th>
+                  <th class="titleAcoes">Ações</th>
+                </tr>
+              </thead>
+              <tbody id="despesas-tbody">
+                <!-- Aqui serão adicionadas as despesas -->
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Total</th>
+                  <th id="total-valor">R$ 0,00</th>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          
+    </div>
+    
+    <div class="resultados">
+        <div class="saldo">
+          <h3>Saldo</h3>
+          <span id="saldoValue">R$ 0.00</span>
+          <button id="calcSaldo">Calcular</button>
+        </div>
+      </div>
+
+    </div>
+<script src="/assets/javascript/script.js"></script>
 </body>
 </html>
