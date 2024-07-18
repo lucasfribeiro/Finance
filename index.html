@@ -1,113 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles/styles.css">
-    <link rel="shortcut icon" href="/assets/images/websiteIcon.png" type="image/x-icon">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/styles/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/websiteIcon.png"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Finance | Controle financeiro</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="logo">
-            <i class='bx bxs-dollar-circle'></i>
-            <h2>Finance</h2>
-        </div>
+      <div class="logo">
+        <i class="bx bxs-dollar-circle"></i>
+        <h2>Finance</h2>
+      </div>
 
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class='bx bx-menu' id="menu_icon"></i>
-            <i class='bx bx-x' id="close_icon"></i>
-        </label>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bx bx-menu" id="menu_icon"></i>
+        <i class="bx bx-x" id="close_icon"></i>
+      </label>
 
-        <nav class="navigation">
-            <button>Desempenho</button>
-            <button>Lembretes</button>
-            <button>Como usar</button>
-            
-            <div class="profile">
-            <img src="/assets/images/user.png" alt="user_image">
-            <button>Perfil</button>
+      <nav class="navigation">
+        <button>Desempenho</button>
+        <button id="modal_btn">Lembretes</button>
+        <button>Como usar</button>
+
+        <div class="profile">
+          <img src="/assets/images/user.png" alt="user_image" />
+          <button>Perfil</button>
         </div>
-        </nav>
-        
+      </nav>
     </header>
 
     <div class="container">
-        <h3>Página inicial</h3>
-        <div class="top">
+      <h3>Página inicial</h3>
+      <div class="top">
         <div class="item">
-            <p>Renda fixa</p>
-            <input type="number" id="fixa" placeholder="R$ 0.00">
+          <p>Renda fixa</p>
+          <input type="number" id="fixa" placeholder="R$ 0.00" />
         </div>
         <div class="item">
-            <p>Renda extra</p>
-            <input type="number" id="extra" placeholder="R$ 0.00">
+          <p>Renda extra</p>
+          <input type="number" id="extra" placeholder="R$ 0.00" />
         </div>
         <div class="item">
-            <p>Renda total</p>
-            <div class="results">
-                <span id="total">R$ 0.00</span>
-                <button id="calc_renda">Adicionar</button>
-            </div>
+          <p>Renda total</p>
+          <div class="results">
+            <span id="total">R$ 0.00</span>
+            <button id="calc_renda">Adicionar</button>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="bottom">
+      <div class="bottom">
         <div class="addArea">
-            <div class="inputs">
+          <div class="inputs">
             <label>Nome:</label>
-          <input
-            type="text"
-            id="nova-despesa-nome"
-            placeholder="Ex.: Água"
-          />
-        </div>
-        <div class="inputs">
-          <label>Valor:</label>
-          <input
-            type="number"
-            id="nova-despesa-valor"
-            placeholder="R$ 0.00"
-          />
-        </div>
-        <div class="inputs">
-          <label>Vencimento:</label>
-          <input
-            type="date"
-            id="nova-despesa-data"
-          />
-        </div>
+            <input type="text" id="nova-despesa-nome" placeholder="Ex.: Água" />
+          </div>
+          <div class="inputs">
+            <label>Valor:</label>
+            <input
+              type="number"
+              id="nova-despesa-valor"
+              placeholder="R$ 0.00"
+            />
+          </div>
+          <div class="inputs">
+            <label>Vencimento:</label>
+            <input type="date" id="nova-despesa-data" />
+          </div>
           <button id="adicionar-despesa">Adicionar</button>
-          </div>
+        </div>
 
-          <div class="tabela">
-            <table id="despesas-table">
-              <thead>
-                <tr>
-                  <th>Despesa</th>
-                  <th>Valor</th>
-                  <th>Vencimento</th>
-                  <th class="titleAcoes">Ações</th>
-                </tr>
-              </thead>
-              <tbody id="despesas-tbody">
-                <!-- Aqui serão adicionadas as despesas -->
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Total</th>
-                  <th id="total-valor">R$ 0,00</th>
-                </tr>
-              </tfoot>
-            </table>
-          </div>
-          
-    </div>
-    
-    <div class="resultados">
+        <div class="tabela">
+          <table id="despesas-table">
+            <thead>
+              <tr>
+                <th>Despesa</th>
+                <th>Valor</th>
+                <th>Vencimento</th>
+                <th class="titleAcoes">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="despesas-tbody">
+              <!-- Aqui serão adicionadas as despesas -->
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>Total</th>
+                <th id="total-valor">R$ 0,00</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div class="resultados">
         <div class="saldo">
           <h3>Saldo</h3>
           <span id="saldoValue">R$ 0.00</span>
@@ -115,7 +119,20 @@
         </div>
       </div>
 
+      <div class="lembretes" id="lembretesModal">
+        <div class="modal">
+          <div class="title-modal">
+            <p>Lembretes</p>
+            <button id="close_modal"><i class="bx bx-x"></i></button>
+          </div>
+
+          <div class="modal-message">
+            <p>Você não tem nenhum lembrete no momento!</p>
+          </div>
+          <div class="items-modal" id="modalItems"></div>
+        </div>
+      </div>
     </div>
-<script src="/assets/javascript/script.js"></script>
-</body>
+    <script src="/assets/javascript/script.js"></script>
+  </body>
 </html>

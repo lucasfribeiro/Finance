@@ -96,3 +96,15 @@ function calcularSaldo() {
     saldo = rendaTotal - totalValor;
     document.getElementById('saldoValue').innerText = `R$ ${saldo.toFixed(2)}`;
   }
+
+const closeModal = document.getElementById('close_modal');
+const openModal = document.getElementById('modal_btn');
+const lembretesModal = document.getElementById('lembretesModal');
+
+openModal.addEventListener("click", function () {
+  lembretesModal.style.display = "flex";
+});
+
+closeModal.addEventListener("click", function () {
+  lembretesModal.style.display = "none";
+});
