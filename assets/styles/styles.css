@@ -361,6 +361,7 @@ table {
 
 .modal{
     min-width: 80%;
+    margin: 0 20px;
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 5px;
