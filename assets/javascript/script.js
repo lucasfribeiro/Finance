@@ -5,6 +5,8 @@ let rFixa = 0;
 let rExtra = 0;
 let saldo = 0;
 
+//Rendas
+
 document.getElementById('calc_renda').addEventListener('click', calcularRenda);
 document.getElementById('adicionar-despesa').addEventListener('click', adicionarDespesa);
 document.getElementById('calcSaldo').addEventListener('click',calcularSaldo)
@@ -15,6 +17,8 @@ function calcularRenda() {
     const resultado = rFixa + rExtra;
     document.getElementById('total').innerText = `R$ ${resultado.toFixed(2)}`;
 }
+
+//Tabelas
 
 document
   .getElementById("adicionar-despesa")
@@ -97,8 +101,10 @@ function calcularSaldo() {
     document.getElementById('saldoValue').innerText = `R$ ${saldo.toFixed(2)}`;
   }
 
+//Abrir modal de lembretes
+
 const closeModal = document.getElementById('close_modal');
-const openModal = document.getElementById('modal_btn');
+const openModal = document.getElementById('lbr_btn');
 const lembretesModal = document.getElementById('lembretesModal');
 
 openModal.addEventListener("click", function () {
@@ -108,3 +114,56 @@ openModal.addEventListener("click", function () {
 closeModal.addEventListener("click", function () {
   lembretesModal.style.display = "none";
 });
+
+//Navegação entre as telas
+
+const initialPage = document.getElementById('inicial');
+
+const backToInitial = document.getElementById('back');
+const backToInitialUse = document.getElementById('back-use');
+const backToInitialPerfil = document.getElementById('back-profile');
+
+const openDesempenho = document.getElementById('des_btn');
+const openUse = document.getElementById('use_btn');
+const openProfile = document.getElementById('pro_btn');
+
+const desempenho = document.getElementById('desempenho');
+const used = document.getElementById('como_usar');
+const myProfile = document.getElementById('perfil');
+
+openDesempenho.addEventListener("click", function(){
+  desempenho.style.display = "block";
+  used.style.display = "none";
+  myProfile.style.display = "none";
+  initialPage.style.display = "none";
+})
+
+openUse.addEventListener("click", function(){
+  desempenho.style.display = "none";
+  used.style.display = "block";
+  myProfile.style.display = "none";
+  initialPage.style.display = "none";
+})
+
+openProfile.addEventListener("click", function(){
+  desempenho.style.display = "none";
+  used.style.display = "none";
+  myProfile.style.display = "block";
+  initialPage.style.display = "none";
+})
+
+
+backToInitial.addEventListener("click", function() {
+  desempenho.style.display = "none";
+  initialPage.style.display = "block"
+})
+
+backToInitialUse.addEventListener("click", function() {
+  used.style.display = "none";
+  initialPage.style.display = "block"
+})
+
+backToInitialPerfil.addEventListener("click", function() {
+  myProfile.style.display = "none";
+  initialPage.style.display = "block"
+})

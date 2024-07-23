@@ -23,6 +23,8 @@
     <title>Finance | Controle financeiro</title>
   </head>
   <body>
+
+    <!--NAVBAR-->
     <header>
       <div class="logo">
         <i class="bx bxs-dollar-circle"></i>
@@ -36,30 +38,34 @@
       </label>
 
       <nav class="navigation">
-        <button>Desempenho</button>
-        <button id="modal_btn">Lembretes</button>
-        <button>Como usar</button>
+        <button id="des_btn">Desempenho</button>
+        <button id="lbr_btn">Lembretes</button>
+        <button id="use_btn">Como usar</button>
 
         <div class="profile">
           <img src="/assets/images/user.png" alt="user_image" />
-          <button>Perfil</button>
+          <button id="pro_btn">Perfil</button>
         </div>
       </nav>
     </header>
 
-    <div class="container">
+    <!--FIM NAVBAR-->
+
+    <!--RECEITAS-->
+
+    <div class="container-inicial" id="inicial">
       <h3>Página inicial</h3>
       <div class="top">
         <div class="item">
-          <p>Renda fixa</p>
+          <p>Receita fixa</p>
           <input type="number" id="fixa" placeholder="R$ 0.00" />
         </div>
         <div class="item">
-          <p>Renda extra</p>
+          <p>Receita extra</p>
           <input type="number" id="extra" placeholder="R$ 0.00" />
         </div>
         <div class="item">
-          <p>Renda total</p>
+          <p>Receita total</p>
           <div class="results">
             <span id="total">R$ 0.00</span>
             <button id="calc_renda">Adicionar</button>
@@ -67,7 +73,11 @@
         </div>
       </div>
 
+      <!--FIM RECEITAS-->
+
       <div class="bottom">
+
+        <!--DESPESAS-->
         <div class="addArea">
           <div class="inputs">
             <label>Nome:</label>
@@ -110,7 +120,9 @@
           </table>
         </div>
       </div>
+      <!--FIM DESPESAS-->
 
+      <!--RESULTADOS-->
       <div class="resultados">
         <div class="saldo">
           <h3>Saldo</h3>
@@ -118,21 +130,72 @@
           <button id="calcSaldo">Calcular</button>
         </div>
       </div>
+      <!--FIM RESULTADOS-->
 
-      <div class="lembretes" id="lembretesModal">
-        <div class="modal">
-          <div class="title-modal">
-            <p>Lembretes</p>
-            <button id="close_modal"><i class="bx bx-x"></i></button>
-          </div>
+    </div>
 
-          <div class="modal-message">
-            <p>Você não tem nenhum lembrete no momento!</p>
-          </div>
-          <div class="items-modal" id="modalItems"></div>
+    <!--LEMBRETES-->
+    <div class="lembretes" id="lembretesModal">
+      <div class="modal">
+        <div class="title-modal">
+          <p>Lembretes</p>
+          <button id="close_modal"><i class="bx bx-x"></i></button>
         </div>
+
+        <div id="item-modal">
+          
+        </div>
+        <!--<div>
+          <p>Água</p>
+          <p>R$ 0.00</p>
+          <p>20/07/2024</p>
+          <p id="situacao">Vencida</p>
+        </div>-->
+
+        <div class="modal-message">
+          <p>Você não tem nenhum lembrete no momento!</p>
+        </div>
+        <div class="items-modal" id="modalItems"></div>
       </div>
     </div>
+    <!--FIM LEMBRETES-->
+
+    <!--DESEMPENHO-->
+    <div class="container-desempenho" id="desempenho">
+      <div class="top-title">
+        <h3>Desempenho</h3>
+        <button id="back">
+          <i class='bx bx-left-arrow-alt'></i>
+          Voltar ao início
+        </button>
+      </div>
+    </div>
+    <!--FIM DESEMPENHO-->
+    
+    <!--como usar-->
+    <div class="container-comousar" id="como_usar">
+      <div class="top-title">
+        <h3>Como usar</h3>
+        <button id="back-use">
+          <i class='bx bx-left-arrow-alt'></i>
+          Voltar ao início
+        </button>
+      </div>
+    </div>
+    <!--FIM como usar-->
+
+    <!--Profile-->
+    <div class="container-perfil" id="perfil">
+      <div class="top-title">
+        <h3>Perfil</h3>
+        <button id="back-profile">
+          <i class='bx bx-left-arrow-alt'></i>
+          Voltar ao início
+        </button>
+      </div>
+    </div>
+    <!--FIM Profile-->
+
     <script src="/assets/javascript/script.js"></script>
   </body>
 </html>
