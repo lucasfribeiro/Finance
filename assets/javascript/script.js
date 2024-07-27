@@ -167,3 +167,21 @@ backToInitialPerfil.addEventListener("click", function() {
   myProfile.style.display = "none";
   initialPage.style.display = "block"
 })
+
+//Aterar foto de perfil
+
+const image = document.getElementById("img-profile"); 
+const imageNav = document.getElementById("img-profile-nav"); 
+const input = document.getElementById("file");
+const saveBtn = document.getElementById("save")
+
+input.addEventListener("change", () => {
+  image.src = URL.createObjectURL(input.files[0])
+})
+
+input.addEventListener("change", () => {
+  imageNav.src = URL.createObjectURL(input.files[0])
+})
+
+
+

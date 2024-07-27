@@ -23,7 +23,6 @@
     <title>Finance | Controle financeiro</title>
   </head>
   <body>
-
     <!--NAVBAR-->
     <header>
       <div class="logo">
@@ -43,7 +42,7 @@
         <button id="use_btn">Como usar</button>
 
         <div class="profile">
-          <img src="/assets/images/user.png" alt="user_image" />
+          <img src="/assets/images/user.png" alt="user_image" id="img-profile-nav"/>
           <button id="pro_btn">Perfil</button>
         </div>
       </nav>
@@ -76,7 +75,6 @@
       <!--FIM RECEITAS-->
 
       <div class="bottom">
-
         <!--DESPESAS-->
         <div class="addArea">
           <div class="inputs">
@@ -131,7 +129,6 @@
         </div>
       </div>
       <!--FIM RESULTADOS-->
-
     </div>
 
     <!--LEMBRETES-->
@@ -142,9 +139,7 @@
           <button id="close_modal"><i class="bx bx-x"></i></button>
         </div>
 
-        <div id="item-modal">
-          
-        </div>
+        <div id="item-modal"></div>
         <!--<div>
           <p>Água</p>
           <p>R$ 0.00</p>
@@ -165,19 +160,19 @@
       <div class="top-title">
         <h3>Desempenho</h3>
         <button id="back">
-          <i class='bx bx-left-arrow-alt'></i>
+          <i class="bx bx-left-arrow-alt"></i>
           Voltar ao início
         </button>
       </div>
     </div>
     <!--FIM DESEMPENHO-->
-    
+
     <!--como usar-->
     <div class="container-comousar" id="como_usar">
       <div class="top-title">
         <h3>Como usar</h3>
         <button id="back-use">
-          <i class='bx bx-left-arrow-alt'></i>
+          <i class="bx bx-left-arrow-alt"></i>
           Voltar ao início
         </button>
       </div>
@@ -189,9 +184,48 @@
       <div class="top-title">
         <h3>Perfil</h3>
         <button id="back-profile">
-          <i class='bx bx-left-arrow-alt'></i>
+          <i class="bx bx-left-arrow-alt"></i>
           Voltar ao início
         </button>
+      </div>
+      <div class="content-profile">
+        <img src="/assets/images/user.png" alt="user_image" id="img-profile"/>
+        <div class="input-area">
+
+          <div class="item-profile">
+            <label for="name">Nome de usuário</label>
+            <input type="text" placeholder="João" />
+          </div>
+
+          <div class="item-profile">
+            <label for="name">E-mail</label>
+            <input type="email" placeholder="joao@gmail.com" />
+          </div>
+
+          <div class="item-profile">
+            <label for="name">Alterar foto</label>
+            <input type="file" id="file"/>
+          </div>
+
+          <div class="item-profile">
+            <label for="name">Senha atual</label>
+            <input type="password" />
+          </div>
+
+          <div class="item-profile">
+            <label for="name">Nova senha</label>
+            <input type="password" />
+          </div>
+
+          <div class="item-profile">
+            <label for="name">Confimar senha</label>
+            <input type="password" />
+          </div>
+        </div>
+        <div class="profile-btns">
+          <button id="save">Salvar alterações</button>
+          <button>Redefinir</button>
+        </div>
       </div>
     </div>
     <!--FIM Profile-->
