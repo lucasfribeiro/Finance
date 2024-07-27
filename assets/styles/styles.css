@@ -163,7 +163,7 @@ header{
 
 
 .container-inicial{
-    display: none; /* display: block */
+    display: block; /* display: block */
     position: relative;
     top: 60px;
     margin: 20px;
@@ -444,7 +444,7 @@ table {
 }
 
 .container-perfil{
-    display: block; /* display: none */
+    display: none; /* display: none */
     position: relative;
     top: 60px;
     margin: 20px;
